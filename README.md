@@ -1,4 +1,3 @@
-# SIBKM-Metrodata-EmployeeDB
-SIBKM Metrodata Academy Final Project Kelompok 22
+# Employee Management System: Employee Attendance
+## SIBKM Metrodata Academy Final Project Group 23
 <hr>
-# Employee Management System : Employee Attendance
