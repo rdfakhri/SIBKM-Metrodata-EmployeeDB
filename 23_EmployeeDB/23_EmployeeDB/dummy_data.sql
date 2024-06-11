@@ -153,6 +153,18 @@ INSERT INTO tbl_employees VALUES (8, 'Hannah','Khan','Female','hannahkhan@metrod
 INSERT INTO tbl_employees VALUES (9, 'Isaac','Nguyen','Male','isaacnguyen@metrodata.co','+84 2468 1012','2024-04-01',50000,8,'ACC',4);
 INSERT INTO tbl_employees VALUES (10, 'Jasmine','Malhotra','Female','jasminemal@metrodata.co','+92 5555 6666','2023-10-01',42000,2,'DMS',2);
 
+INSERT INTO tbl_employees VALUES (11, 'Jasmine','Malhotra','Female','testing@metrodata.co','+92 5555 6666','2023-10-01',42000,2,'DMS',2);
+INSERT INTO tbl_employees VALUES (12, 'Jasmine','Malhotra','Female','test2@metrodata.co','+92 5555 6666','2023-10-01',42000,2,'DMS',2);
+
+SELECT * FROM tbl_job_histories
+SELECT * FROM tbl_employees
+
+UPDATE tbl_employees
+SET first_name = 'Radennnnn'
+WHERE id=12;
+
+DELETE FROM tbl_employees WHERE id = 12;
+
 -- tbl_job_histories
 -- tbl_accounts
 -- tbl_account_roles

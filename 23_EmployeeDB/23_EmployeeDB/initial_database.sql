@@ -111,3 +111,7 @@ CREATE TABLE tbl_account_roles(
 	FOREIGN KEY (account) REFERENCES tbl_accounts(id),
 	FOREIGN KEY (role) REFERENCES tbl_roles(id)
 );
+
+ALTER TABLE tbl_job_histories
+MODIFY CONSTRAINT FK__tbl_job_h__emplo__534D60F1  -- Replace with your actual constraint name
+DELETE CASCADE;

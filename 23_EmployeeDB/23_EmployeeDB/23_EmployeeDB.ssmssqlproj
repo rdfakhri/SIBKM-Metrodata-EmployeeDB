@@ -25,11 +25,41 @@
           <AssociatedConnUserName />
           <FullPath>dummy_data.sql</FullPath>
         </FileNode>
+        <FileNode Name="func_gender.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LAPTOP-9IGT6QET:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>LAPTOP-9IGT6QET</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>func_gender.sql</FullPath>
+        </FileNode>
+        <FileNode Name="func_password_match.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LAPTOP-9IGT6QET:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>LAPTOP-9IGT6QET</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>func_password_match.sql</FullPath>
+        </FileNode>
+        <FileNode Name="func_salary.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LAPTOP-9IGT6QET:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>LAPTOP-9IGT6QET</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>func_salary.sql</FullPath>
+        </FileNode>
         <FileNode Name="initial_database.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LAPTOP-9IGT6QET:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>LAPTOP-9IGT6QET</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>initial_database.sql</FullPath>
+        </FileNode>
+        <FileNode Name="tr_insert_employee.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LAPTOP-9IGT6QET:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>LAPTOP-9IGT6QET</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>tr_insert_employee.sql</FullPath>
+        </FileNode>
+        <FileNode Name="tr_update_employee.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LAPTOP-9IGT6QET:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>LAPTOP-9IGT6QET</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>tr_update_employee.sql</FullPath>
         </FileNode>
       </Items>
     </LogicalFolder>
