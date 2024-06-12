@@ -1,5 +1,5 @@
 -- =============================================
--- Author:		Djulizah B
+-- Author:		Djulizah B, Raden Fakhri R, Siti Anisa M
 -- Create date: 30-05-2024
 -- Description:	<Description,,>
 -- =============================================
@@ -84,7 +84,7 @@ CREATE TABLE tbl_job_histories(
 	department int NOT NULL,
 	FOREIGN KEY (job) REFERENCES tbl_jobs(id),
 	FOREIGN KEY (department) REFERENCES tbl_departments(id),
-	FOREIGN KEY (employee) REFERENCES tbl_employees(id),
+--	FOREIGN KEY (employee) REFERENCES tbl_employees(id), //conflict with employee when tr_delete_employee triggered
 	PRIMARY KEY (employee, start_date)
 );
 
@@ -106,8 +106,15 @@ CREATE TABLE tbl_account_roles(
 	FOREIGN KEY (role) REFERENCES tbl_roles(id)
 );
 
-
--- altering table test for tr_delete_employee FK conflict
+-- altering tbl_job_histories for tr_delete_employee FK conflict
 ALTER TABLE tbl_job_histories
-MODIFY CONSTRAINT FK__tbl_job_h__emplo__534D60F1  -- Replace with your actual constraint name
-DELETE CASCADE;
+ADD CONSTRAINT FK_Employee_JobHistories FOREIGN KEY (employee)
+REFERENCES tbl_employees(id);
+
+-- creating table for employee attendance (tabel inovasi)
+CREATE TABLE tbl_attendance(
+	id int PRIMARY KEY,
+	employee int, -- FK to tbl_employee.id
+	email VARCHAR(25) NOT NULL UNIQUE,
+	time datetime DEFAULT GETDATE()
+)
