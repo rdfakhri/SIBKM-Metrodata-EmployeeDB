@@ -4,7 +4,7 @@
 -- Description:	<Description,,>
 -- =============================================
 
-CREATE FUNCTION func_password_match (@password VARCHAR(255), @newPassword VARCHAR(255))
+CREATE FUNCTION isPasswordMatch (@password VARCHAR(255), @newPassword VARCHAR(255))
 RETURNS BIT
 AS
 BEGIN

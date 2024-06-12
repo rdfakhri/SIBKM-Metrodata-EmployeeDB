@@ -4,7 +4,7 @@
 -- Description:	<Description,,>
 -- =============================================
 
-CREATE FUNCTION func_salary (@salary INT)
+CREATE FUNCTION isValidSalary (@salary INT)
 RETURNS BIT
 AS
 BEGIN

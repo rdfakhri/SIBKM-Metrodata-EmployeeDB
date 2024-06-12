@@ -4,7 +4,7 @@
 -- Description:	<Description,,>
 -- =============================================
 
-CREATE FUNCTION func_gender (@gender VARCHAR(10))
+CREATE FUNCTION isValidGender (@gender VARCHAR(10))
 RETURNS BIT
 AS
 BEGIN
