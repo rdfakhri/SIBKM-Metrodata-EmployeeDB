@@ -19,11 +19,11 @@
     </LogicalFolder>
     <LogicalFolder Name="Queries" Type="0" Sorted="true">
       <Items>
-        <FileNode Name="dummy_data.sql">
+        <FileNode Name="func_email_format.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LAPTOP-9IGT6QET:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>LAPTOP-9IGT6QET</AssociatedConnSrvName>
           <AssociatedConnUserName />
-          <FullPath>dummy_data.sql</FullPath>
+          <FullPath>func_email_format.sql</FullPath>
         </FileNode>
         <FileNode Name="func_gender.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LAPTOP-9IGT6QET:True</AssociatedConnectionMoniker>
@@ -37,6 +37,18 @@
           <AssociatedConnUserName />
           <FullPath>func_password_match.sql</FullPath>
         </FileNode>
+        <FileNode Name="func_password_policy.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LAPTOP-9IGT6QET:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>LAPTOP-9IGT6QET</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>func_password_policy.sql</FullPath>
+        </FileNode>
+        <FileNode Name="func_phone_number.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LAPTOP-9IGT6QET:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>LAPTOP-9IGT6QET</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>func_phone_number.sql</FullPath>
+        </FileNode>
         <FileNode Name="func_salary.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LAPTOP-9IGT6QET:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>LAPTOP-9IGT6QET</AssociatedConnSrvName>
@@ -49,11 +61,23 @@
           <AssociatedConnUserName />
           <FullPath>initial_database.sql</FullPath>
         </FileNode>
+        <FileNode Name="initial_dummy_data.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LAPTOP-9IGT6QET:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>LAPTOP-9IGT6QET</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>initial_dummy_data.sql</FullPath>
+        </FileNode>
         <FileNode Name="initial_tables.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LAPTOP-9IGT6QET:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>LAPTOP-9IGT6QET</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>initial_tables.sql</FullPath>
+        </FileNode>
+        <FileNode Name="sp_add_attendance.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LAPTOP-9IGT6QET:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>LAPTOP-9IGT6QET</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>sp_add_attendance.sql</FullPath>
         </FileNode>
         <FileNode Name="sp_add_department.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LAPTOP-9IGT6QET:True</AssociatedConnectionMoniker>
@@ -163,11 +187,23 @@
           <AssociatedConnUserName />
           <FullPath>sp_edit_role.sql</FullPath>
         </FileNode>
+        <FileNode Name="tester.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LAPTOP-9IGT6QET:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>LAPTOP-9IGT6QET</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>tester.sql</FullPath>
+        </FileNode>
         <FileNode Name="tr_delete_employee.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LAPTOP-9IGT6QET:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>LAPTOP-9IGT6QET</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>tr_delete_employee.sql</FullPath>
+        </FileNode>
+        <FileNode Name="tr_insert_attendance.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LAPTOP-9IGT6QET:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>LAPTOP-9IGT6QET</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>tr_insert_attendance.sql</FullPath>
         </FileNode>
         <FileNode Name="tr_insert_employee.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LAPTOP-9IGT6QET:True</AssociatedConnectionMoniker>
@@ -181,11 +217,11 @@
           <AssociatedConnUserName />
           <FullPath>tr_update_employee.sql</FullPath>
         </FileNode>
-        <FileNode Name="vw_account_roles.sql">
+        <FileNode Name="vw_attendance.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LAPTOP-9IGT6QET:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>LAPTOP-9IGT6QET</AssociatedConnSrvName>
           <AssociatedConnUserName />
-          <FullPath>vw_account_roles.sql</FullPath>
+          <FullPath>vw_attendance.sql</FullPath>
         </FileNode>
         <FileNode Name="vw_countries.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LAPTOP-9IGT6QET:True</AssociatedConnectionMoniker>
@@ -234,6 +270,12 @@
           <AssociatedConnSrvName>LAPTOP-9IGT6QET</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>vw_regions.sql</FullPath>
+        </FileNode>
+        <FileNode Name="vw_roles.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LAPTOP-9IGT6QET:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>LAPTOP-9IGT6QET</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>vw_roles.sql</FullPath>
         </FileNode>
       </Items>
     </LogicalFolder>
