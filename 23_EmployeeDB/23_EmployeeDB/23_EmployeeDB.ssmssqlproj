@@ -49,11 +49,125 @@
           <AssociatedConnUserName />
           <FullPath>initial_database.sql</FullPath>
         </FileNode>
-        <FileNode Name="tables.sql">
+        <FileNode Name="initial_tables.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LAPTOP-9IGT6QET:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>LAPTOP-9IGT6QET</AssociatedConnSrvName>
           <AssociatedConnUserName />
-          <FullPath>tables.sql</FullPath>
+          <FullPath>initial_tables.sql</FullPath>
+        </FileNode>
+        <FileNode Name="sp_add_department.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LAPTOP-9IGT6QET:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>LAPTOP-9IGT6QET</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>sp_add_department.sql</FullPath>
+        </FileNode>
+        <FileNode Name="sp_add_job.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LAPTOP-9IGT6QET:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>LAPTOP-9IGT6QET</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>sp_add_job.sql</FullPath>
+        </FileNode>
+        <FileNode Name="sp_add_location.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LAPTOP-9IGT6QET:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>LAPTOP-9IGT6QET</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>sp_add_location.sql</FullPath>
+        </FileNode>
+        <FileNode Name="sp_add_permission.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LAPTOP-9IGT6QET:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>LAPTOP-9IGT6QET</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>sp_add_permission.sql</FullPath>
+        </FileNode>
+        <FileNode Name="sp_add_region.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LAPTOP-9IGT6QET:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>LAPTOP-9IGT6QET</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>sp_add_region.sql</FullPath>
+        </FileNode>
+        <FileNode Name="sp_add_role.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LAPTOP-9IGT6QET:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>LAPTOP-9IGT6QET</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>sp_add_role.sql</FullPath>
+        </FileNode>
+        <FileNode Name="sp_delete_department.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LAPTOP-9IGT6QET:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>LAPTOP-9IGT6QET</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>sp_delete_department.sql</FullPath>
+        </FileNode>
+        <FileNode Name="sp_delete_job.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LAPTOP-9IGT6QET:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>LAPTOP-9IGT6QET</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>sp_delete_job.sql</FullPath>
+        </FileNode>
+        <FileNode Name="sp_delete_location.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LAPTOP-9IGT6QET:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>LAPTOP-9IGT6QET</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>sp_delete_location.sql</FullPath>
+        </FileNode>
+        <FileNode Name="sp_delete_permission.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LAPTOP-9IGT6QET:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>LAPTOP-9IGT6QET</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>sp_delete_permission.sql</FullPath>
+        </FileNode>
+        <FileNode Name="sp_delete_region.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LAPTOP-9IGT6QET:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>LAPTOP-9IGT6QET</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>sp_delete_region.sql</FullPath>
+        </FileNode>
+        <FileNode Name="sp_delete_role.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LAPTOP-9IGT6QET:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>LAPTOP-9IGT6QET</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>sp_delete_role.sql</FullPath>
+        </FileNode>
+        <FileNode Name="sp_edit_department.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LAPTOP-9IGT6QET:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>LAPTOP-9IGT6QET</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>sp_edit_department.sql</FullPath>
+        </FileNode>
+        <FileNode Name="sp_edit_job.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LAPTOP-9IGT6QET:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>LAPTOP-9IGT6QET</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>sp_edit_job.sql</FullPath>
+        </FileNode>
+        <FileNode Name="sp_edit_location.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LAPTOP-9IGT6QET:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>LAPTOP-9IGT6QET</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>sp_edit_location.sql</FullPath>
+        </FileNode>
+        <FileNode Name="sp_edit_permission.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LAPTOP-9IGT6QET:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>LAPTOP-9IGT6QET</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>sp_edit_permission.sql</FullPath>
+        </FileNode>
+        <FileNode Name="sp_edit_region.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LAPTOP-9IGT6QET:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>LAPTOP-9IGT6QET</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>sp_edit_region.sql</FullPath>
+        </FileNode>
+        <FileNode Name="sp_edit_role.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LAPTOP-9IGT6QET:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>LAPTOP-9IGT6QET</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>sp_edit_role.sql</FullPath>
+        </FileNode>
+        <FileNode Name="tr_delete_employee.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LAPTOP-9IGT6QET:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>LAPTOP-9IGT6QET</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>tr_delete_employee.sql</FullPath>
         </FileNode>
         <FileNode Name="tr_insert_employee.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LAPTOP-9IGT6QET:True</AssociatedConnectionMoniker>
@@ -66,6 +180,60 @@
           <AssociatedConnSrvName>LAPTOP-9IGT6QET</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>tr_update_employee.sql</FullPath>
+        </FileNode>
+        <FileNode Name="vw_account_roles.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LAPTOP-9IGT6QET:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>LAPTOP-9IGT6QET</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>vw_account_roles.sql</FullPath>
+        </FileNode>
+        <FileNode Name="vw_countries.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LAPTOP-9IGT6QET:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>LAPTOP-9IGT6QET</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>vw_countries.sql</FullPath>
+        </FileNode>
+        <FileNode Name="vw_departments.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LAPTOP-9IGT6QET:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>LAPTOP-9IGT6QET</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>vw_departments.sql</FullPath>
+        </FileNode>
+        <FileNode Name="vw_employees.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LAPTOP-9IGT6QET:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>LAPTOP-9IGT6QET</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>vw_employees.sql</FullPath>
+        </FileNode>
+        <FileNode Name="vw_job_details.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LAPTOP-9IGT6QET:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>LAPTOP-9IGT6QET</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>vw_job_details.sql</FullPath>
+        </FileNode>
+        <FileNode Name="vw_locations.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LAPTOP-9IGT6QET:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>LAPTOP-9IGT6QET</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>vw_locations.sql</FullPath>
+        </FileNode>
+        <FileNode Name="vw_permissions.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LAPTOP-9IGT6QET:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>LAPTOP-9IGT6QET</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>vw_permissions.sql</FullPath>
+        </FileNode>
+        <FileNode Name="vw_profile.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LAPTOP-9IGT6QET:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>LAPTOP-9IGT6QET</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>vw_profile.sql</FullPath>
+        </FileNode>
+        <FileNode Name="vw_regions.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LAPTOP-9IGT6QET:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>LAPTOP-9IGT6QET</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>vw_regions.sql</FullPath>
         </FileNode>
       </Items>
     </LogicalFolder>
