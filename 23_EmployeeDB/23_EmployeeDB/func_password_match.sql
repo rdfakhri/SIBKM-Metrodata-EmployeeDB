@@ -1,4 +1,9 @@
--- F-05: function password_match
+-- =============================================
+-- Author:		Djulizah B
+-- Create date: 10-06-2024
+-- Description:	<Description,,>
+-- =============================================
+
 CREATE FUNCTION func_password_match (@password VARCHAR(255), @newPassword VARCHAR(255))
 RETURNS BIT
 AS

@@ -1,4 +1,9 @@
--- F-06: func_salary 
+-- =============================================
+-- Author:		Djulizah B
+-- Create date: 10-04-2024
+-- Description:	<Description,,>
+-- =============================================
+
 CREATE FUNCTION func_salary (@salary INT)
 RETURNS BIT
 AS

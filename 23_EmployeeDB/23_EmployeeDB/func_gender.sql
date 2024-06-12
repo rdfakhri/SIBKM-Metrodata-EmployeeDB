@@ -1,4 +1,9 @@
--- F-03: function gender
+-- =============================================
+-- Author:		Djulizah B
+-- Create date: 10-06-2024
+-- Description:	<Description,,>
+-- =============================================
+
 CREATE FUNCTION func_gender (@gender VARCHAR(10))
 RETURNS BIT
 AS

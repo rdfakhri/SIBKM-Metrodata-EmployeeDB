@@ -1,6 +1,8 @@
-/*
-	DUMMY DATA
-*/
+-- =============================================
+-- Author:		Djulizah B
+-- Create date: 06-06-2024
+-- Description:	<Description,,>
+-- =============================================
 
 -- tbl_permissions
 INSERT INTO tbl_permissions VALUES (1, 'add employee');
