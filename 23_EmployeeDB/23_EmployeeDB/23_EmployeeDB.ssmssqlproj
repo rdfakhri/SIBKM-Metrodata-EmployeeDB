@@ -85,6 +85,12 @@
           <AssociatedConnUserName />
           <FullPath>sp_add_department.sql</FullPath>
         </FileNode>
+        <FileNode Name="sp_add_employee.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LAPTOP-9IGT6QET:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>LAPTOP-9IGT6QET</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>sp_add_employee.sql</FullPath>
+        </FileNode>
         <FileNode Name="sp_add_job.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LAPTOP-9IGT6QET:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>LAPTOP-9IGT6QET</AssociatedConnSrvName>
@@ -120,6 +126,12 @@
           <AssociatedConnSrvName>LAPTOP-9IGT6QET</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>sp_delete_department.sql</FullPath>
+        </FileNode>
+        <FileNode Name="sp_delete_employee.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LAPTOP-9IGT6QET:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>LAPTOP-9IGT6QET</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>sp_delete_employee.sql</FullPath>
         </FileNode>
         <FileNode Name="sp_delete_job.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LAPTOP-9IGT6QET:True</AssociatedConnectionMoniker>
@@ -157,6 +169,12 @@
           <AssociatedConnUserName />
           <FullPath>sp_edit_department.sql</FullPath>
         </FileNode>
+        <FileNode Name="sp_edit_employee.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LAPTOP-9IGT6QET:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>LAPTOP-9IGT6QET</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>sp_edit_employee.sql</FullPath>
+        </FileNode>
         <FileNode Name="sp_edit_job.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LAPTOP-9IGT6QET:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>LAPTOP-9IGT6QET</AssociatedConnSrvName>
@@ -186,6 +204,24 @@
           <AssociatedConnSrvName>LAPTOP-9IGT6QET</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>sp_edit_role.sql</FullPath>
+        </FileNode>
+        <FileNode Name="sp_forgot_password.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LAPTOP-9IGT6QET:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>LAPTOP-9IGT6QET</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>sp_forgot_password.sql</FullPath>
+        </FileNode>
+        <FileNode Name="sp_generate_otp.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LAPTOP-9IGT6QET:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>LAPTOP-9IGT6QET</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>sp_generate_otp.sql</FullPath>
+        </FileNode>
+        <FileNode Name="sp_login.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LAPTOP-9IGT6QET:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>LAPTOP-9IGT6QET</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>sp_login.sql</FullPath>
         </FileNode>
         <FileNode Name="tester.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LAPTOP-9IGT6QET:True</AssociatedConnectionMoniker>
