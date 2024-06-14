@@ -13,14 +13,17 @@ BEGIN
   BEGIN TRY
 	-- check data on tbl_employee
     IF @username = (SELECT email FROM tbl_employees where email = @username)
-	PRINT 'Login Sukses'
+	AND
 	-- check data on tbl_account
+	@username = (SELECT username FROM tbl_accounts where username = @username)
+	PRINT 'Login Success!'
+	ELSE PRINT 'Account Not Registered!'
     
   END TRY
 
   BEGIN CATCH
     SET @errorMessage = ERROR_MESSAGE();
-    RAISERROR ('Error deleting department: %s', 16, 1, @errorMessage);
+    RAISERROR ('Error login: %s', 16, 1, @errorMessage);
   END CATCH;
 
 END;

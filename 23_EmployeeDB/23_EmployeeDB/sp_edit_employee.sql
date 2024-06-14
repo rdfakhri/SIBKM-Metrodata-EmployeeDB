@@ -22,6 +22,35 @@ BEGIN
   DECLARE @errorMessage nvarchar(500);
 
   BEGIN TRY
+    -- Validate data using functions (call them before insert)
+    IF @gender = '' OR dbo.isValidGender(@gender) = 0
+    BEGIN
+      SET @errorMessage = 'Invalid gender provided.';
+      RAISERROR ('Error adding employee: %s', 16, 1, @errorMessage);
+      RETURN;
+    END;
+
+    IF dbo.isValidEmail(@email) = 0
+    BEGIN
+      SET @errorMessage = 'Invalid email address.';
+      RAISERROR ('Error adding employee: %s', 16, 1, @errorMessage);
+      RETURN;
+    END;
+
+    IF dbo.IsNumericPhoneNumber(@phone) = 0
+    BEGIN
+      SET @errorMessage = 'Invalid phone number format.';
+      RAISERROR ('Error adding employee: %s', 16, 1, @errorMessage);
+      RETURN;
+    END;
+
+    IF dbo.isValidSalary(@salary) = 0  -- Implement logic for min/max salary in function
+    BEGIN
+      SET @errorMessage = 'Salary is outside the allowed range.';
+      RAISERROR ('Error adding employee: %s', 16, 1, @errorMessage);
+      RETURN;
+    END;
+
     UPDATE tbl_employees
 	SET first_name = @firstName,
 		last_name = @lastName,

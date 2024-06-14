@@ -13,7 +13,7 @@ CREATE PROCEDURE addEmployee (
   @hireDate date,
   @salary int,
   @managerId int,
-  @jobId varchar(10), 
+  @jobId varchar(10),
   @departmentId int,
   @password varchar(50),
   @confirmPassword varchar(50)
@@ -21,7 +21,6 @@ CREATE PROCEDURE addEmployee (
 AS
 BEGIN
   DECLARE @errorMessage nvarchar(500);
-  DECLARE @employeeId int;
 
   BEGIN TRY
     -- Validate password confirmation
@@ -30,6 +29,35 @@ BEGIN
       SET @errorMessage = 'Passwords do not match.';
       RAISERROR ('Error adding employee: %s', 16, 1, @errorMessage);
       RETURN; -- Exit procedure if passwords don't match
+    END;
+
+    -- Validate data using functions (call them before insert)
+    IF @gender = '' OR dbo.isValidGender(@gender) = 0
+    BEGIN
+      SET @errorMessage = 'Invalid gender provided.';
+      RAISERROR ('Error adding employee: %s', 16, 1, @errorMessage);
+      RETURN;
+    END;
+
+    IF dbo.isValidEmail(@email) = 0
+    BEGIN
+      SET @errorMessage = 'Invalid email address.';
+      RAISERROR ('Error adding employee: %s', 16, 1, @errorMessage);
+      RETURN;
+    END;
+
+    IF dbo.IsNumericPhoneNumber(@phone) = 0
+    BEGIN
+      SET @errorMessage = 'Invalid phone number format.';
+      RAISERROR ('Error adding employee: %s', 16, 1, @errorMessage);
+      RETURN;
+    END;
+
+    IF dbo.isValidSalary(@salary) = 0  -- Implement logic for min/max salary in function
+    BEGIN
+      SET @errorMessage = 'Salary is outside the allowed range.';
+      RAISERROR ('Error adding employee: %s', 16, 1, @errorMessage);
+      RETURN;
     END;
 
     -- Insert employee data
@@ -45,7 +73,6 @@ BEGIN
       job,
       department
     )
-	OUTPUT INSERTED.id INTO @employeeId
     VALUES (
       @firstName,
       @lastName,
@@ -62,20 +89,13 @@ BEGIN
     -- Insert account data for the new employee
     INSERT INTO tbl_accounts (
       id,
-      username, 
-      password,
-      otp, 
-      is_expired, 
-      is_used 
+      username,
+      password
     )
     VALUES (
       @employeeId,
       @email,
-      @password,
-      -- Replace with logic to generate random OTP
-      0, 
-      GETDATE() + INTERVAL 1 DAY, 
-      1
+      @password
     );
 
     -- Give 'Employee' role to new data in tbl_account_roles
@@ -87,10 +107,11 @@ BEGIN
       @employeeId,
       4
     );
-
   END TRY
+
   BEGIN CATCH
     SET @errorMessage = ERROR_MESSAGE();
     RAISERROR ('Error adding employee: %s', 16, 1, @errorMessage);
   END CATCH;
+
 END;
