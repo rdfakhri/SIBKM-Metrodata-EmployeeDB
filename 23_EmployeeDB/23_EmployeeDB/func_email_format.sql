@@ -4,7 +4,7 @@
 -- Description:	<Description,,>
 -- =============================================
 
-CREATE FUNCTION IsValidEmail(@email varchar(255))
+CREATE FUNCTION isValidEmail(@email varchar(255))
 RETURNS bit AS
 BEGIN
   DECLARE @isValid bit;

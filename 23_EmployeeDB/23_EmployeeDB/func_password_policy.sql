@@ -4,7 +4,7 @@
 -- Description:	<Description,,>
 -- =============================================
 
-CREATE FUNCTION IsValidPassword(@password varchar(50))
+CREATE FUNCTION isValidPassword(@password varchar(50))
 RETURNS bit AS
 BEGIN
   DECLARE @isValid bit;
