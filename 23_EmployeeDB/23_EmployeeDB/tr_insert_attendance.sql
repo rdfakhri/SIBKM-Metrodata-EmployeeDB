@@ -1,30 +1,30 @@
 -- =============================================
--- Author:		Djulizah B, Raden Fakhri R, Siti Anisa M
+-- Author: Djulizah B, Raden Fakhri R, Siti Anisa M
 -- Create date: 12-06-2024
--- Description:	<Description,,>
+-- Description:	Print messages of attendance status when data is added to tbl_attendances
 -- =============================================
 
-CREATE TRIGGER tr_insert_absen
-ON tbl_attendance
+CREATE TRIGGER tr_insert_attendance
+ON tbl_attendances
 AFTER INSERT
 AS
 BEGIN
-  DECLARE @jamAbsen TIME(0);
+  DECLARE @attendTime TIME(0);
 
   -- Get the attendance time from inserted data
-  SELECT TOP 1 @jamAbsen = time FROM inserted;
+  SELECT TOP 1 @attendTime = time FROM inserted;
 
-  IF @jamAbsen BETWEEN '09:00:00' AND '09:10:00'
+  IF @attendTime BETWEEN '09:00:00' AND '09:10:00'
   BEGIN
-    PRINT 'Absen masuk berhasil';
+    PRINT 'Check-In Attendance succesfully recorded!';
   END
-  ELSE IF @jamAbsen BETWEEN '17:30:00' AND '17:40:00'
+  ELSE IF @attendTime BETWEEN '17:30:00' AND '17:40:00'
   BEGIN
-    PRINT 'Absen Keluar berhasil';
+    PRINT 'Check-Out Attendance succesfully recorded!';
   END
   ELSE
   BEGIN
-    PRINT 'Absen belum dibuka';
+    PRINT 'Attendance not open yet!';
   END;
 END;
 GO
