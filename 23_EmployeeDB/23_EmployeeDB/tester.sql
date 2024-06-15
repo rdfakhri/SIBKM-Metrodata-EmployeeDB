@@ -1,5 +1,10 @@
+-- =============================================
+-- Author: Djulizah B, Raden Fakhri R, Siti Anisa M
+-- Create date: 
+-- Description:	Queries to tests SP, Functions, Triggers, etc.
+-- =============================================
 
-S-- employee trigger testing
+-- employee trigger testing
 select * from tbl_job_histories
 select * from tbl_employees
 
@@ -36,3 +41,43 @@ EXEC addAttendance
     @time = '12-06-2024 17:35:00';
 
 select * from tbl_attendance
+
+--USE ADD DATA PERMISSIONS
+EXEC AddPermission @id = 28, @name = 'Read Access';
+
+EXEC dbo.addPermission @name = 'add employee'
+select * from tbl_permissions
+
+--RESULT ADD DATA PERMISSIONS
+SELECT * FROM tbl_permissions;
+
+-- USE SP EDIT/UPDATE DATA PERMISSIONS
+EXEC UpdatePermission @id = 28, @name = 'READ ACCESS';
+
+--RESULT SP EDIT/UPDATE DATA PERMISSIONS
+SELECT * FROM tbl_permissions WHERE id = '28';
+
+--USE SP DELETE DATA PERMISSIONS
+EXEC DeletePermission @id = 28;
+
+-- RESULT SP DELETE DATA PERMSSIONS
+SELECT * FROM tbl_permissions;
+
+-- USE ADD DATA ROLES
+EXEC AddRole @id = 5, @name = 'Secretary';
+
+--RESULT  SP DATA ROLES
+SELECT * FROM tbl_roles;
+
+--USE SP EDIT/UPDATE DATA ROLES
+
+EXEC UpdateRole @id = 5, @name = 'Senior Manager';
+
+--RESULT SP EDIT/UPDATE DATA ROLES
+SELECT * FROM tbl_roles;
+
+--USE SP DELETE DATA ROLES
+EXEC DeleteRole @id = 5;
+
+-- RESULT SP DELETE DATA ROLES
+SELECT * FROM tbl_roles;
