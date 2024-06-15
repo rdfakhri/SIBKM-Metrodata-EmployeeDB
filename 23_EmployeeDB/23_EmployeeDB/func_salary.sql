@@ -1,10 +1,10 @@
 -- =============================================
--- Author:		Djulizah B
+-- Author: Djulizah B
 -- Create date: 10-04-2024
--- Description:	<Description,,>
+-- Description:	Function to check salary input not out of the range
 -- =============================================
 
-CREATE FUNCTION isValidSalary (@salary INT)
+CREATE FUNCTION isValidSalary (@jobId VARCHAR(10), @salary INT) -- @jobId is not implemented
 RETURNS BIT
 AS
 BEGIN

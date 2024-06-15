@@ -1,7 +1,7 @@
 -- =============================================
--- Author:		Djulizah B
+-- Author: Djulizah B
 -- Create date: 10-06-2024
--- Description:	<Description,,>
+-- Description:	Function to check gender input
 -- =============================================
 
 CREATE FUNCTION isValidGender (@gender VARCHAR(10))
