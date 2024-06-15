@@ -265,29 +265,29 @@
           <AssociatedConnUserName />
           <FullPath>tr_update_employee.sql</FullPath>
         </FileNode>
-        <FileNode Name="vw_attendance.sql">
+        <FileNode Name="vw_attendance_details.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LAPTOP-9IGT6QET:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>LAPTOP-9IGT6QET</AssociatedConnSrvName>
           <AssociatedConnUserName />
-          <FullPath>vw_attendance.sql</FullPath>
+          <FullPath>vw_attendance_details.sql</FullPath>
         </FileNode>
-        <FileNode Name="vw_countries.sql">
+        <FileNode Name="vw_country_details.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LAPTOP-9IGT6QET:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>LAPTOP-9IGT6QET</AssociatedConnSrvName>
           <AssociatedConnUserName />
-          <FullPath>vw_countries.sql</FullPath>
+          <FullPath>vw_country_details.sql</FullPath>
         </FileNode>
-        <FileNode Name="vw_departments.sql">
+        <FileNode Name="vw_department_details.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LAPTOP-9IGT6QET:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>LAPTOP-9IGT6QET</AssociatedConnSrvName>
           <AssociatedConnUserName />
-          <FullPath>vw_departments.sql</FullPath>
+          <FullPath>vw_department_details.sql</FullPath>
         </FileNode>
-        <FileNode Name="vw_employees.sql">
+        <FileNode Name="vw_employee_details.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LAPTOP-9IGT6QET:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>LAPTOP-9IGT6QET</AssociatedConnSrvName>
           <AssociatedConnUserName />
-          <FullPath>vw_employees.sql</FullPath>
+          <FullPath>vw_employee_details.sql</FullPath>
         </FileNode>
         <FileNode Name="vw_job_details.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LAPTOP-9IGT6QET:True</AssociatedConnectionMoniker>
@@ -295,35 +295,35 @@
           <AssociatedConnUserName />
           <FullPath>vw_job_details.sql</FullPath>
         </FileNode>
-        <FileNode Name="vw_locations.sql">
+        <FileNode Name="vw_location_details.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LAPTOP-9IGT6QET:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>LAPTOP-9IGT6QET</AssociatedConnSrvName>
           <AssociatedConnUserName />
-          <FullPath>vw_locations.sql</FullPath>
+          <FullPath>vw_location_details.sql</FullPath>
         </FileNode>
-        <FileNode Name="vw_permissions.sql">
+        <FileNode Name="vw_permission_details.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LAPTOP-9IGT6QET:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>LAPTOP-9IGT6QET</AssociatedConnSrvName>
           <AssociatedConnUserName />
-          <FullPath>vw_permissions.sql</FullPath>
+          <FullPath>vw_permission_details.sql</FullPath>
         </FileNode>
-        <FileNode Name="vw_profile.sql">
+        <FileNode Name="vw_profile_details.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LAPTOP-9IGT6QET:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>LAPTOP-9IGT6QET</AssociatedConnSrvName>
           <AssociatedConnUserName />
-          <FullPath>vw_profile.sql</FullPath>
+          <FullPath>vw_profile_details.sql</FullPath>
         </FileNode>
-        <FileNode Name="vw_regions.sql">
+        <FileNode Name="vw_region_details.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LAPTOP-9IGT6QET:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>LAPTOP-9IGT6QET</AssociatedConnSrvName>
           <AssociatedConnUserName />
-          <FullPath>vw_regions.sql</FullPath>
+          <FullPath>vw_region_details.sql</FullPath>
         </FileNode>
-        <FileNode Name="vw_roles.sql">
+        <FileNode Name="vw_role_details.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LAPTOP-9IGT6QET:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>LAPTOP-9IGT6QET</AssociatedConnSrvName>
           <AssociatedConnUserName />
-          <FullPath>vw_roles.sql</FullPath>
+          <FullPath>vw_role_details.sql</FullPath>
         </FileNode>
       </Items>
     </LogicalFolder>
