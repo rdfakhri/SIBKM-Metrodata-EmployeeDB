@@ -1,21 +1,21 @@
 -- =============================================
--- Author:		Djulizah B, Raden Fakhri R, Siti Anisa M
+-- Author: Djulizah B, Raden Fakhri R, Siti Anisa M
 -- Create date: 30-05-2024
--- Description:	<Description,,>
+-- Description:	Query to make tables
 -- =============================================
 
 CREATE TABLE tbl_permissions(
-	id int PRIMARY KEY,
+	id int PRIMARY KEY IDENTITY(1,1),
 	name varchar(100) NOT NULL
 );
 
 CREATE TABLE tbl_roles(
-	id int PRIMARY KEY,
+	id int PRIMARY KEY IDENTITY (1,1),
 	name VARCHAR(50)
 );
 
 CREATE TABLE tbl_role_permissions(
-	id int PRIMARY KEY,
+	id int PRIMARY KEY IDENTITY(1,1),
 	role int NOT NULL,
 	permission int NOT NULL,
 	FOREIGN KEY (role) REFERENCES tbl_roles(id),
@@ -23,7 +23,7 @@ CREATE TABLE tbl_role_permissions(
 );
 
 CREATE TABLE tbl_regions(
-	id int PRIMARY KEY,
+	id int PRIMARY KEY IDENTITY(1,1),
 	name VARCHAR(25) NOT NULL
 );
 
@@ -35,7 +35,7 @@ CREATE TABLE tbl_countries(
 );
 
 CREATE TABLE tbl_locations(
-	id int PRIMARY KEY,
+	id int PRIMARY KEY IDENTITY(1,1),
 	street_address varchar(40),
 	postal_code varchar(12),
 	city varchar(30) NOT NULL,
@@ -45,7 +45,7 @@ CREATE TABLE tbl_locations(
 );
 
 CREATE TABLE tbl_departments(
-	id int PRIMARY KEY,
+	id int PRIMARY KEY IDENTITY(1,1),
 	name varchar(30) NOT NULL,
 	location int NOT NULL,
 	FOREIGN KEY (location) REFERENCES tbl_locations(id)
@@ -59,7 +59,7 @@ CREATE TABLE tbl_jobs(
 );
 
 CREATE TABLE tbl_employees(
-	id int PRIMARY KEY,
+	id int PRIMARY KEY IDENTITY(1,1),
 	first_name VARCHAR(25) NOT NULL,
 	last_name VARCHAR(25),
 	gender VARCHAR(10) NOT NULL,
@@ -84,7 +84,7 @@ CREATE TABLE tbl_job_histories(
 	department int NOT NULL,
 	FOREIGN KEY (job) REFERENCES tbl_jobs(id),
 	FOREIGN KEY (department) REFERENCES tbl_departments(id),
---	FOREIGN KEY (employee) REFERENCES tbl_employees(id), //conflict with employee when tr_delete_employee triggered
+ 	FOREIGN KEY (employee) REFERENCES tbl_employees(id), -- conflict with employee when tr_delete_employee triggered
 	PRIMARY KEY (employee, start_date)
 );
 
@@ -99,22 +99,23 @@ CREATE TABLE tbl_accounts(
 );
 
 CREATE TABLE tbl_account_roles(
-	id int PRIMARY KEY,
+	id int PRIMARY KEY IDENTITY(1,1),
 	account int NOT NULL,
 	role int NOT NULL,
 	FOREIGN KEY (account) REFERENCES tbl_accounts(id),
 	FOREIGN KEY (role) REFERENCES tbl_roles(id)
 );
 
+-- creating table for employee attendance (inovate)
+CREATE TABLE tbl_attendance(
+	id int PRIMARY KEY IDENTITY(1,1),
+	employee int, -- FK to tbl_employee.id
+	email VARCHAR(25) NOT NULL UNIQUE,
+	time datetime DEFAULT GETDATE(),
+	FOREIGN KEY (employee) REFERENCES tbl_employees(id)
+)
+
 -- altering tbl_job_histories for tr_delete_employee FK conflict
 ALTER TABLE tbl_job_histories
 ADD CONSTRAINT FK_Employee_JobHistories FOREIGN KEY (employee)
 REFERENCES tbl_employees(id);
-
--- creating table for employee attendance (tabel inovasi)
-CREATE TABLE tbl_attendance(
-	id int PRIMARY KEY,
-	employee int, -- FK to tbl_employee.id
-	email VARCHAR(25) NOT NULL UNIQUE,
-	time datetime DEFAULT GETDATE()
-)
