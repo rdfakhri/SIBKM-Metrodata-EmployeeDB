@@ -110,12 +110,14 @@ CREATE TABLE tbl_account_roles(
 CREATE TABLE tbl_attendances(
 	id int PRIMARY KEY IDENTITY(1,1),
 	employee int, -- FK to tbl_employee.id
-	email VARCHAR(25) NOT NULL UNIQUE,
+	email VARCHAR(25) NOT NULL, -- can't put UNIQUE constraint, there will be duplicate data
 	time datetime DEFAULT GETDATE(),
 	FOREIGN KEY (employee) REFERENCES tbl_employees(id)
 )
 
 -- altering tbl_job_histories for tr_delete_employee FK conflict
+/*
 ALTER TABLE tbl_job_histories
 ADD CONSTRAINT FK_Employee_JobHistories FOREIGN KEY (employee)
 REFERENCES tbl_employees(id);
+*/
