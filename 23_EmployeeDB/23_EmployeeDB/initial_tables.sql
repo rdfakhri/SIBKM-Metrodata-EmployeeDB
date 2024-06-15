@@ -107,7 +107,7 @@ CREATE TABLE tbl_account_roles(
 );
 
 -- creating table for employee attendance (inovate)
-CREATE TABLE tbl_attendance(
+CREATE TABLE tbl_attendances(
 	id int PRIMARY KEY IDENTITY(1,1),
 	employee int, -- FK to tbl_employee.id
 	email VARCHAR(25) NOT NULL UNIQUE,
