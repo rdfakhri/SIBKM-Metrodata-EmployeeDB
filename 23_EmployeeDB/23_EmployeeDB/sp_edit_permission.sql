@@ -1,11 +1,10 @@
 -- =============================================
--- Author:		Siti Anisa M
+-- Author: Siti Anisa M
 -- Create date: 07-06-2024
--- Description:	<Description,,>
+-- Description:	Stored Procedure to update data in tbl_permissions
 -- =============================================
 
---SP EDIT/UPDATE DATA PERMISSIONS
-CREATE PROCEDURE UpdatePermission (
+CREATE PROCEDURE updatePermission (
     @id int, 
     @name varchar(100)
 )
@@ -31,9 +30,3 @@ BEGIN
     RAISERROR ('Error updating permission: %s', 16, 1, @errorMessage);
   END CATCH;
 END;
-
--- USE SP EDIT/UPDATE DATA PERMISSIONS
-EXEC UpdatePermission @id = 28, @name = 'READ ACCESS';
-
---RESULT SP EDIT/UPDATE DATA PERMISSIONS
-SELECT * FROM tbl_permissions WHERE id = '28';

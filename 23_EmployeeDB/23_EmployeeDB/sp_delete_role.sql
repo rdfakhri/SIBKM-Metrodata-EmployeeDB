@@ -1,11 +1,10 @@
 -- =============================================
--- Author:		Siti Anisa M
+-- Author: Siti Anisa M
 -- Create date: 07-06-2024
--- Description:	<Description,,>
+-- Description:	Stored procedure to delete data in tbl_roles
 -- =============================================
 
---SP DELETE DATA ROLES
-CREATE PROCEDURE DeleteRole (@id int)
+CREATE PROCEDURE deleteRole (@id int)
 AS
 BEGIN
   DECLARE @errorMessage nvarchar(500);
@@ -27,9 +26,3 @@ BEGIN
     RAISERROR ('Error deleting role: %s', 16, 1, @errorMessage);
   END CATCH;
 END;
-
---USE SP DELETE DATA ROLES
-EXEC DeleteRole @id = 5;
-
--- RESULT SP DELETE DATA ROLES
-SELECT * FROM tbl_roles;

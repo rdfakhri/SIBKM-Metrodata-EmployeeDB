@@ -1,10 +1,10 @@
 -- =============================================
--- Author:		Raden Fakhri R
+-- Author: Raden Fakhri R
 -- Create date: 05-06-2024
--- Description:	<Description,,>
+-- Description:	Stored procedure to delete data in tbl_regions
 -- =============================================
 
-CREATE PROCEDURE DeleteRegion (
+CREATE PROCEDURE deleteRegion (
   @id INT
 )
 AS

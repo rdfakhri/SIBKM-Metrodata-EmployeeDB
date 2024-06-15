@@ -1,11 +1,10 @@
 -- =============================================
--- Author:		Siti Anisa M
+-- Author: Siti Anisa M
 -- Create date: 07-06-2024
--- Description:	<Description,,>
+-- Description:	Stored Procedure to delete data in tbl_permissions
 -- =============================================
 
---SP DELETE DATA PERMISSIONS
-CREATE PROCEDURE DeletePermission (@id int)
+CREATE PROCEDURE deletePermission (@id int)
 AS
 BEGIN
   DECLARE @errorMessage nvarchar(500);
@@ -27,9 +26,3 @@ BEGIN
     RAISERROR ('Error deleting permission: %s', 16, 1, @errorMessage);
   END CATCH;
 END;
-
---USE SP DELETE DATA PERMISSIONS
-EXEC DeletePermission @id = 28;
-
--- RESULT SP DELETE DATA PERMSSIONS
-SELECT * FROM tbl_permissions;

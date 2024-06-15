@@ -1,11 +1,10 @@
 -- =============================================
--- Author:		Siti Anisa M
+-- Author: Siti Anisa M
 -- Create date: 07-06-2024
--- Description:	<Description,,>
+-- Description:	Stored procedure to update data in tbl_roles
 -- =============================================
 
--- SP EDIT/UPDATE DATA ROLES
-CREATE PROCEDURE UpdateRole (
+CREATE PROCEDURE updateRole (
     @id int, 
     @name varchar(50)
 )
@@ -31,10 +30,3 @@ BEGIN
     RAISERROR ('Error updating role: %s', 16, 1, @errorMessage);
   END CATCH;
 END;
-
---USE SP EDIT/UPDATE DATA ROLES
-
-EXEC UpdateRole @id = 5, @name = 'Senior Manager';
-
---RESULT SP EDIT/UPDATE DATA ROLES
-SELECT * FROM tbl_roles;

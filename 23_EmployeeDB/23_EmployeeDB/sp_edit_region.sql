@@ -1,10 +1,10 @@
 -- =============================================
--- Author:		Raden Fakhri R
+-- Author: Raden Fakhri R
 -- Create date: 05-06-2024
--- Description:	<Description,,>
+-- Description:	Stored procedure to update data in tbl_regions
 -- =============================================
 
-CREATE PROCEDURE UpdateRegion (
+CREATE PROCEDURE updateRegion (
   @id INT,
   @new_name VARCHAR(25)
 )
