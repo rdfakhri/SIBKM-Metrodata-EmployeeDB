@@ -1,105 +1,62 @@
 -- =============================================
--- Author:		Djulizah B
+-- Author: Djulizah B
 -- Create date: 06-06-2024
--- Description:	<Description,,>
+-- Description:	Inserting dummy data to tables using their designated Stored Procedures
 -- =============================================
 
 -- tbl_permissions
-INSERT INTO tbl_permissions VALUES (1, 'add employee');
-INSERT INTO tbl_permissions VALUES (2, 'edit employee');
-INSERT INTO tbl_permissions VALUES (3, 'delete employee');
-INSERT INTO tbl_permissions VALUES (4, 'detail employee');
-INSERT INTO tbl_permissions VALUES (5, 'add job');
-INSERT INTO tbl_permissions VALUES (6, 'edit job');
-INSERT INTO tbl_permissions VALUES (7, 'delete job');
-INSERT INTO tbl_permissions VALUES (8, 'add department');
-INSERT INTO tbl_permissions VALUES (9, 'edit department');
-INSERT INTO tbl_permissions VALUES (10, 'delete department');
-INSERT INTO tbl_permissions VALUES (11, 'add location');
-INSERT INTO tbl_permissions VALUES (12, 'edit location');
-INSERT INTO tbl_permissions VALUES (13, 'delete location');
-INSERT INTO tbl_permissions VALUES (14, 'add country');
-INSERT INTO tbl_permissions VALUES (15, 'edit country');
-INSERT INTO tbl_permissions VALUES (16, 'delete country');
-INSERT INTO tbl_permissions VALUES (17, 'add region');
-INSERT INTO tbl_permissions VALUES (18, 'edit region');
-INSERT INTO tbl_permissions VALUES (19, 'delete region');
-INSERT INTO tbl_permissions VALUES (20, 'add role');
-INSERT INTO tbl_permissions VALUES (21, 'edit role');
-INSERT INTO tbl_permissions VALUES (22, 'delete role');
-INSERT INTO tbl_permissions VALUES (23, 'add permission');
-INSERT INTO tbl_permissions VALUES (24, 'edit permission');
-INSERT INTO tbl_permissions VALUES (25, 'delete permission');
-INSERT INTO tbl_permissions VALUES (26, 'edit profile');
-INSERT INTO tbl_permissions VALUES (27, 'change password');
+EXEC dbo.addPermission @name = 'Add Employee';
+EXEC dbo.addPermission @name = 'Edit Employee';
+EXEC dbo.addPermission @name = 'Delete Employee';
+EXEC dbo.addPermission @name = 'View Employee Detail';
+EXEC dbo.addPermission @name = 'Add Job';
+EXEC dbo.addPermission @name = 'Edit Job';
+EXEC dbo.addPermission @name = 'Delete Job';
+EXEC dbo.addPermission @name = 'View Job Detail';
+EXEC dbo.addPermission @name = 'Add Department';
+EXEC dbo.addPermission @name = 'Edit Department';
+EXEC dbo.addPermission @name = 'Delete Department';
+EXEC dbo.addPermission @name = 'View Department Detail';
+EXEC dbo.addPermission @name = 'Add Location';
+EXEC dbo.addPermission @name = 'Edit Location';
+EXEC dbo.addPermission @name = 'Delete Location';
+EXEC dbo.addPermission @name = 'View Location Detail';
+EXEC dbo.addPermission @name = 'Add Country';
+EXEC dbo.addPermission @name = 'Edit Country';
+EXEC dbo.addPermission @name = 'Delete Country';
+EXEC dbo.addPermission @name = 'View Country Detail';
+EXEC dbo.addPermission @name = 'Add Region';
+EXEC dbo.addPermission @name = 'Edit Region';
+EXEC dbo.addPermission @name = 'Delete Region';
+EXEC dbo.addPermission @name = 'View Region Detail';
+EXEC dbo.addPermission @name = 'Add Role';
+EXEC dbo.addPermission @name = 'Edit Role';
+EXEC dbo.addPermission @name = 'Delete Role';
+EXEC dbo.addPermission @name = 'View Role Detail';
+EXEC dbo.addPermission @name = 'Add Permission';
+EXEC dbo.addPermission @name = 'Edit Permission';
+EXEC dbo.addPermission @name = 'Delete Permission';
+EXEC dbo.addPermission @name = 'View Permission Detail';
+EXEC dbo.addPermission @name = 'Edit Profile';
+EXEC dbo.addPermission @name = 'View Profile Detail';
+EXEC dbo.addPermission @name = 'Edit Password';
+EXEC dbo.addPermission @name = 'Add Attendance';
+EXEC dbo.addPermission @name = 'View Attendance Detail';
 
 -- tbl_roles
-INSERT INTO tbl_roles VALUES (1, 'Super Admin');
-INSERT INTO tbl_roles VALUES (2, 'Admin');
-INSERT INTO tbl_roles VALUES (3, 'Manager');
-INSERT INTO tbl_roles VALUES (4, 'Employee');
+EXEC dbo.addRole @name = 'Super Admin';
+EXEC dbo.addRole @name = 'Admin';
+EXEC dbo.addRole @name = 'Manager';
+EXEC dbo.addRole @name = 'Employee';
 
--- tbl_role_permissions
-INSERT INTO tbl_role_permissions VALUES (1, 1, 1);
-INSERT INTO tbl_role_permissions VALUES (2, 1, 2);
-INSERT INTO tbl_role_permissions VALUES (3, 1, 3);
-INSERT INTO tbl_role_permissions VALUES (4, 1, 4);
-INSERT INTO tbl_role_permissions VALUES (5, 1, 5);
-INSERT INTO tbl_role_permissions VALUES (6, 1, 6);
-INSERT INTO tbl_role_permissions VALUES (7, 1, 7);
-INSERT INTO tbl_role_permissions VALUES (8, 1, 8);
-INSERT INTO tbl_role_permissions VALUES (9, 1, 9);
-INSERT INTO tbl_role_permissions VALUES (10, 1, 10);
-INSERT INTO tbl_role_permissions VALUES (11, 1, 11);
-INSERT INTO tbl_role_permissions VALUES (12, 1, 12);
-INSERT INTO tbl_role_permissions VALUES (13, 1, 13);
-INSERT INTO tbl_role_permissions VALUES (14, 1, 14);
-INSERT INTO tbl_role_permissions VALUES (15, 1, 15);
-INSERT INTO tbl_role_permissions VALUES (16, 1, 16);
-INSERT INTO tbl_role_permissions VALUES (17, 1, 17);
-INSERT INTO tbl_role_permissions VALUES (18, 1, 18);
-INSERT INTO tbl_role_permissions VALUES (19, 1, 19);
-INSERT INTO tbl_role_permissions VALUES (20, 1, 20);
-INSERT INTO tbl_role_permissions VALUES (21, 1, 21);
-INSERT INTO tbl_role_permissions VALUES (22, 1, 22);
-INSERT INTO tbl_role_permissions VALUES (23, 1, 23);
-INSERT INTO tbl_role_permissions VALUES (24, 1, 24);
-INSERT INTO tbl_role_permissions VALUES (25, 1, 25);
-
-INSERT INTO tbl_role_permissions VALUES (26, 2, 1);
-INSERT INTO tbl_role_permissions VALUES (27, 2, 2);
-INSERT INTO tbl_role_permissions VALUES (28, 2, 3);
-INSERT INTO tbl_role_permissions VALUES (29, 2, 4);
-INSERT INTO tbl_role_permissions VALUES (30, 2, 5);
-INSERT INTO tbl_role_permissions VALUES (31, 2, 6);
-INSERT INTO tbl_role_permissions VALUES (32, 2, 7);
-INSERT INTO tbl_role_permissions VALUES (33, 2, 8);
-INSERT INTO tbl_role_permissions VALUES (34, 2, 9);
-INSERT INTO tbl_role_permissions VALUES (35, 2, 10);
-INSERT INTO tbl_role_permissions VALUES (36, 2, 11);
-INSERT INTO tbl_role_permissions VALUES (37, 2, 12);
-INSERT INTO tbl_role_permissions VALUES (38, 2, 13);
-INSERT INTO tbl_role_permissions VALUES (39, 2, 14);
-INSERT INTO tbl_role_permissions VALUES (40, 2, 15);
-INSERT INTO tbl_role_permissions VALUES (41, 2, 17);
-INSERT INTO tbl_role_permissions VALUES (42, 2, 18);
-INSERT INTO tbl_role_permissions VALUES (43, 2, 20);
-INSERT INTO tbl_role_permissions VALUES (44, 2, 21);
-
-INSERT INTO tbl_role_permissions VALUES (45, 3, 2);
-INSERT INTO tbl_role_permissions VALUES (46, 3, 4);
-INSERT INTO tbl_role_permissions VALUES (47, 3, 26);
-INSERT INTO tbl_role_permissions VALUES (48, 3, 27);
-
-INSERT INTO tbl_role_permissions VALUES (49, 4, 26);
-INSERT INTO tbl_role_permissions VALUES (50, 4, 27);
+-- tbl_role_permissions //no SP
 
 -- tbl_regions
-INSERT INTO tbl_regions VALUES (1, 'Southeast Asia');
-INSERT INTO tbl_regions VALUES (2, 'South Asia');
-INSERT INTO tbl_regions VALUES (3, 'East Asia');
-INSERT INTO tbl_regions VALUES (4, 'Central Asia');
-INSERT INTO tbl_regions VALUES (5, 'West Asia');
+EXEC dbo.addRegion @name = 'SouthEast Asia';
+EXEC dbo.addRegion @name = 'South Asia';
+EXEC dbo.addRegion @name = 'East Asia';
+EXEC dbo.addRegion @name = 'Central Asia';
+EXEC dbo.addRegion @name = 'West Asia';
 
 -- tbl_countries
 INSERT INTO tbl_countries VALUES ('IDN', 'Indonesia', 1);
@@ -155,6 +112,6 @@ INSERT INTO tbl_employees VALUES (8, 'Hannah','Khan','Female','hannahkhan@metrod
 INSERT INTO tbl_employees VALUES (9, 'Isaac','Nguyen','Male','isaacnguyen@metrodata.co','+84 2468 1012','2024-04-01',50000,8,'ACC',4);
 INSERT INTO tbl_employees VALUES (10, 'Jasmine','Malhotra','Female','jasminemal@metrodata.co','+92 5555 6666','2023-10-01',42000,2,'DMS',2);
 
--- tbl_job_histories
--- tbl_accounts
--- tbl_account_roles
+-- tbl_job_histories //no SP -> Trigger Usage
+-- tbl_accounts //within addEmployee SP
+-- tbl_account_roles //within addEmployee SP
