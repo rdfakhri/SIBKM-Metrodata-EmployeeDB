@@ -1,7 +1,7 @@
 -- =============================================
--- Author:		Djulizah B
+-- Author: Djulizah B
 -- Create date: 10-04-2024
--- Description:	<Description,,>
+-- Description:	Add "Resign" status to tbl_job_histories when data in tbl_employee is deleted
 -- =============================================
 
 CREATE TRIGGER tr_delete_employee
@@ -10,9 +10,8 @@ CREATE TRIGGER tr_delete_employee
 BEGIN
   DECLARE @employeeId int;
   
-  SELECT @employeeId = (SELECT TOP 1 deleted.id FROM deleted); -- Get employee ID from deleted row
+  SELECT @employeeId = (SELECT TOP 1 deleted.id FROM deleted);
 
-  -- Insert record with "Resign" status for previous job
   INSERT INTO tbl_job_histories (
     employee,
     start_date,

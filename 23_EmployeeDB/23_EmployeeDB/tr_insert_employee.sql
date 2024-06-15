@@ -1,14 +1,13 @@
 -- =============================================
--- Author:		Djulizah B
+-- Author: Djulizah B
 -- Create date: 10-06-2024
--- Description:	<Description,,>
+-- Description:	Add "Active" status to tbl_job_histories when data in tbl_employee is inserted
 -- =============================================
 
 CREATE TRIGGER tr_insert_employee
   ON tbl_employees
   AFTER INSERT AS
 BEGIN
-  -- SET NOCOUNT ON is not necessary here
   
   INSERT INTO tbl_job_histories (
     employee,
@@ -26,5 +25,6 @@ BEGIN
     inserted.job,
     inserted.department
   FROM inserted;
+
 END;
 GO
