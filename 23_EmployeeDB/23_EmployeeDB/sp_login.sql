@@ -1,14 +1,13 @@
 -- =============================================
--- Author:		Djulizah B
+-- Author: Djulizah B
 -- Create date: 14-06-2024
--- Description:	<Description,,>
+-- Description:	Stored procedure to login
 -- =============================================
 
-CREATE PROCEDURE login (@username varchar, @password varchar)
+CREATE PROCEDURE login (@username varchar(25), @password varchar(255))
 AS
 BEGIN
   DECLARE @errorMessage nvarchar(500);
-
 
   BEGIN TRY
 	-- check data on tbl_employee
