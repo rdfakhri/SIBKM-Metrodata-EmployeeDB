@@ -1,7 +1,7 @@
 -- =============================================
--- Author:		Djulizah B, Raden Fakhri R, Siti Anisa M
+-- Author: Djulizah B, Raden Fakhri R, Siti Anisa M
 -- Create date: 12-06-2024
--- Description:	<Description,,>
+-- Description:	View for tbl_attendances
 -- =============================================
 
 CREATE VIEW attendance_details

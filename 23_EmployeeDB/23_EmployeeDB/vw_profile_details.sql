@@ -1,10 +1,10 @@
 -- =============================================
--- Author:		Raden Fakhri R
+-- Author: Raden Fakhri R
 -- Create date: 03-06-2024
--- Description:	<Description,,>
+-- Description:	View for employee and manager profile details
 -- =============================================
 
-CREATE VIEW view_employee_profile AS
+CREATE VIEW profile_details AS
 SELECT 
   e.id AS employee_id,
   e.first_name,

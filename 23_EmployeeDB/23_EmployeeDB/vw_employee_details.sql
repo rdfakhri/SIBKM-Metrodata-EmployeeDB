@@ -1,7 +1,7 @@
 -- =============================================
--- Author:		Raden Fakhri R
+-- Author: Raden Fakhri R
 -- Create date: 03-06-2024
--- Description:	<Description,,>
+-- Description:	View for tbl_employees
 -- =============================================
 
 CREATE VIEW employee_details AS

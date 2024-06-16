@@ -1,10 +1,10 @@
 -- =============================================
--- Author:		Raden Fakhri R
+-- Author: Raden Fakhri R
 -- Create date: 03-06-2024
--- Description:	<Description,,>
+-- Description:	View for tbl_locations
 -- =============================================
 
-CREATE VIEW view_all_locations AS
+CREATE VIEW location_details AS
 SELECT 
   l.id, 
   l.street_address, 

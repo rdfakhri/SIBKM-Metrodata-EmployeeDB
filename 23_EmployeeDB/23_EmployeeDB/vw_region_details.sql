@@ -1,9 +1,9 @@
 -- =============================================
--- Author:		Raden Fakhri R
+-- Author: Raden Fakhri R
 -- Create date: 03-06-2024
--- Description:	<Description,,>
+-- Description:	View for tbl_regions
 -- =============================================
 
-CREATE VIEW view_all_regions AS
+CREATE VIEW region_details AS
 SELECT id, name
 FROM tbl_regions;

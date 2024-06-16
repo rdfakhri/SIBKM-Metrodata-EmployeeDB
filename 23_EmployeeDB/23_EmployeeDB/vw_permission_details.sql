@@ -1,9 +1,9 @@
 -- =============================================
--- Author:		Raden Fakhri R
+-- Author: Raden Fakhri R
 -- Create date: 03-06-2024
--- Description:	<Description,,>
+-- Description:	View for tbl_permissions
 -- =============================================
 
-CREATE VIEW view_all_permissions AS
+CREATE VIEW permission_details AS
 SELECT id, name
 FROM tbl_permissions;
