@@ -1,27 +1,46 @@
 -- =============================================
--- Author:		Raden Fakhri R
+-- Author: Raden Fakhri R
 -- Create date: 05-06-2024
--- Description:	<Description,,>
+-- Description:	Stored procedure to update data in tbl_departments
 -- =============================================
 
-CREATE PROCEDURE UpdateDepartment (@id int, @name varchar(30), @location int)
+CREATE PROCEDURE updateDepartment (
+  @id int,
+  @name varchar(30),
+  @location int
+)
 AS
 BEGIN
   DECLARE @errorMessage nvarchar(500);
-  DECLARE @rowsAffected int;
+  DECLARE @rowsAffected INT;
 
   BEGIN TRY
-    UPDATE tbl_departments 
-    SET name = @name,
-        location = @location
-    WHERE id = @id;
-
-    SET @rowsAffected = @@ROWCOUNT;
+    -- Check department existence
+    SELECT @rowsAffected = COUNT(*) FROM tbl_departments WHERE id = @id;
 
     IF @rowsAffected = 0
+    BEGIN
+      SET @errorMessage = 'Department with ID ' + CAST(@id AS VARCHAR(10)) + ' does not exist.';
+      RAISERROR (@errorMessage, 16, 1);
+    END;
+
+    -- Check location existence
+    IF @location IS NOT NULL
+    BEGIN
+      SELECT @rowsAffected = COUNT(*) FROM tbl_locations WHERE id = @location;
+      IF @rowsAffected = 0
       BEGIN
-        RAISERROR ('Department with ID %d not found.', 10, 1, @id);
+        SET @errorMessage = 'Location with ID ' + CAST(@location AS VARCHAR(10)) + ' does not exist.';
+        RAISERROR (@errorMessage, 16, 1);
       END;
+    END;
+
+    -- Update department
+    UPDATE tbl_departments
+    SET name = @name,
+      location = @location
+    WHERE id = @id;
+
   END TRY
   BEGIN CATCH
     SET @errorMessage = ERROR_MESSAGE();

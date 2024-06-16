@@ -1,10 +1,10 @@
 -- =============================================
--- Author:		Siti Anisa M
+-- Author: Siti Anisa M
 -- Create date: 07-06-2024
--- Description:	<Description,,>
+-- Description:	Stored procedure to add data in tbl_jobs
 -- =============================================
 
-CREATE PROCEDURE AddJob (
+CREATE PROCEDURE addJob (
   @id varchar(10),
   @title varchar(35),
   @min_salary int,
@@ -31,18 +31,3 @@ BEGIN
     RAISERROR ('Error adding job: %s', 16, 1, @errorMessage);
   END CATCH;
 END;
-
-
--- Check SP AddJob
-EXEC sp_helptext 'AddJob';
-
--- USE SP AddJob
--- Menambahkan pekerjaan baru ke tabel tbl_jobs
-EXEC AddJob 
-    @id = 'J001', 
-    @title = 'Software Developer', 
-    @min_salary = 50000, 
-    @max_salary = 100000;
-
--- Result Sp AddJob
-SELECT * FROM tbl_jobs WHERE id = 'J001';

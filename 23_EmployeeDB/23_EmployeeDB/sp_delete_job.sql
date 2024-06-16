@@ -1,11 +1,10 @@
 -- =============================================
--- Author:		Siti Anisa M
+-- Author: Siti Anisa M
 -- Create date: 07-06-2024
--- Description:	<Description,,>
+-- Description:	Stored procedure to delete data in tbl_jobs
 -- =============================================
 
--- SP DELETE DATA JOB
-CREATE PROCEDURE DeleteJob (@id varchar(10))
+CREATE PROCEDURE deleteJob (@id varchar(10))
 AS
 BEGIN
   DECLARE @errorMessage nvarchar(500);
@@ -27,10 +26,3 @@ BEGIN
     RAISERROR ('Error deleting job: %s', 16, 1, @errorMessage);
   END CATCH;
 END;
-
--- USE DELETE DATA JOB
-EXEC DeleteJob 
-    @id = 'J001';
-
---RESULT DELETE DATA JOB
-SELECT * FROM tbl_jobs WHERE id = 'J001';

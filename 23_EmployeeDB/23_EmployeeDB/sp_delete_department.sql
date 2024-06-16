@@ -1,10 +1,10 @@
 -- =============================================
--- Author:		Raden Fakhri R
+-- Author: Raden Fakhri R
 -- Create date: 05-06-2024
--- Description:	<Description,,>
+-- Description:	Stored procedure to delete data in tbl_departments
 -- =============================================
 
-CREATE PROCEDURE DeleteDepartment (@id int)
+CREATE PROCEDURE deleteDepartment (@id int)
 AS
 BEGIN
   DECLARE @errorMessage nvarchar(500);

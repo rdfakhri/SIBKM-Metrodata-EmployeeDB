@@ -1,10 +1,10 @@
 -- =============================================
--- Author:		Siti Anisa M
+-- Author: Siti Anisa M
 -- Create date: 07-06-2024
--- Description:	<Description,,>
+-- Description:	Stored procedure to update data in tbl_jobs
 -- =============================================
 
-CREATE PROCEDURE UpdateJob (
+CREATE PROCEDURE updateJob (
   @id varchar(10),
   @title varchar(35),
   @min_salary int,
@@ -42,13 +42,3 @@ BEGIN
     RAISERROR ('Error updating job: %s', 16, 1, @errorMessage);
   END CATCH;
 END;
-
--- USE SP EDIT/UPDATE JOB
-EXEC UpdateJob 
-    @id = 'J001', 
-    @title = 'Senior Software Developer', 
-    @min_salary = 60000, 
-    @max_salary = 120000;
-
--- RESULT SP EDIT/UPDATE DATAJOB
-SELECT * FROM tbl_jobs WHERE id = 'J001';

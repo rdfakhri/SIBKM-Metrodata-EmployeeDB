@@ -1,7 +1,7 @@
 -- =============================================
--- Author:		Djulizah B
+-- Author: Djulizah B
 -- Create date: 14-06-2024
--- Description:	<Description,,>
+-- Description:	Stored procedure to delete employee data
 -- =============================================
 
 CREATE PROCEDURE deleteEmployee (@id int)
