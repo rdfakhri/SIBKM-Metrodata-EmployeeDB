@@ -59,8 +59,9 @@ EXEC dbo.addRegion @name = 'Central Asia';
 EXEC dbo.addRegion @name = 'West Asia';
 
 -- tbl_countries
-INSERT INTO tbl_countries VALUES ('IDN', 'Indonesia', 1);
-INSERT INTO tbl_countries VALUES ('SGP', 'Singapore', 1);
+EXEC dbo.addCountry @id = 'IDN', @name = 'Indonesia', @region = 1;
+EXEC dbo.addCountry @id = 'SGP', @name = 'Singapore', @region = 1;
+/*
 INSERT INTO tbl_countries VALUES ('NPL', 'Nepal', 2);
 INSERT INTO tbl_countries VALUES ('MDV', 'Maldives', 2);
 INSERT INTO tbl_countries VALUES ('JPN', 'Japan', 3);
@@ -69,10 +70,20 @@ INSERT INTO tbl_countries VALUES ('UZB', 'Uzbekistan', 4);
 INSERT INTO tbl_countries VALUES ('KAZ', 'Kazakhstan', 4);
 INSERT INTO tbl_countries VALUES ('PSE', 'Palestine', 5);
 INSERT INTO tbl_countries VALUES ('QAT', 'Qatar', 5);
+*/
 
 -- tbl_locations
-INSERT INTO tbl_locations VALUES (1, '123 Jalan Merdeka Selatan','10001','Jakarta','DKI Jakarta','IDN');
-INSERT INTO tbl_locations VALUES (2, '456 Orchard Road','238888','Singapore City','Singapore','SGP');
+EXEC dbo.addLocation @street_address = '123 Jalan Merdeka Selatan',
+					@postal_code = '10001',
+					@city = 'Jakarta',
+					@state_province = 'DKI Jakarta',
+					@country = 'IDN';
+EXEC dbo.addLocation @street_address = '456 Orchard Road',
+					@postal_code = '238888',
+					@city = 'Singapore City',
+					@state_province = 'Singapore',
+					@country = 'SGP';
+/*
 INSERT INTO tbl_locations VALUES (3, '789 Dubar Marg','44618','Kathmadu','Bagmati','NPL');
 INSERT INTO tbl_locations VALUES (4, '1011 Male Boduthakurufaanu Magu','20000','Male','Male Atoll','MDV');
 INSERT INTO tbl_locations VALUES (5, '1213 Shibuya Crossing','150-0002','Tokyo','Tokyo Prefecture','JPN');
@@ -81,16 +92,26 @@ INSERT INTO tbl_locations VALUES (7, '789 Tashkent Metro','100000','Tashkent','T
 INSERT INTO tbl_locations VALUES (8, '1011 Nur-Sultan City Center','010000','Nur-Sultan','Akmola Region','KAZ');
 INSERT INTO tbl_locations VALUES (9, '1213 Al-Manara Road','','Jerusalem','Jerussalem','PSE');
 INSERT INTO tbl_locations VALUES (10, '456 Al Corniche Street','44160','Doha','Doha Municipality','QAT');
+*/
 
 -- tbl_departments
-INSERT INTO tbl_departments VALUES (1, 'Customer Service', 1);
-INSERT INTO tbl_departments VALUES (2, 'Marketing', 2);
+EXEC dbo.addDepartment @name = 'Customer Service', @location = 1;
+EXEC dbo.addDepartment @name = 'Marketing', @location = 2;
+/*
 INSERT INTO tbl_departments VALUES (3, 'Research and Development', 5);
 INSERT INTO tbl_departments VALUES (4, 'Finance', 10);
+*/
 
 -- tbl_jobs
-INSERT INTO tbl_jobs VALUES ('CSR','Customer Service Representative', 35000, 50000); --1
-INSERT INTO tbl_jobs VALUES ('TSP','Technical Support Specialist',	40000,	60000); --1
+EXEC dbo.addJob @id = 'CSR', 
+				@title = 'Customer Service Representative',
+				@min_salary = 35000,
+				@max_salary = 50000;
+EXEC dbo.addJob @id = 'TSP', 
+				@title = 'Technical Support Specialist',
+				@min_salary = 40000,
+				@max_salary = 60000;
+/*
 INSERT INTO tbl_jobs VALUES ('CSM','Customer Success Manager', 50000, 75000); -- 1
 INSERT INTO tbl_jobs VALUES ('DMS','Digital Marketing Specialist', 40000, 60000); -- 2
 INSERT INTO tbl_jobs VALUES ('SMMM','Social Media Marketing Manager', 50000, 75000); -- 2
@@ -99,10 +120,35 @@ INSERT INTO tbl_jobs VALUES ('SE','Software Engineer', 60000, 90000); -- 3
 INSERT INTO tbl_jobs VALUES ('DS','Data Scientist', 70000, 100000); -- 3
 INSERT INTO tbl_jobs VALUES ('FA','Financial Analyst', 50000, 70000); -- 4
 INSERT INTO tbl_jobs VALUES ('ACC','Accountant', 45000, 65000); -- 4
+*/
 
 -- tbl_employees
-INSERT INTO tbl_employees VALUES (1, 'Alice', 'Tanaka', 'Female', 'alicetanaka@metrodata.co', '+65 1234 5678', '2023-01-01', 55000, NULL, 'CSR', 1);
-INSERT INTO tbl_employees VALUES (2, 'Ben','Lee','Male','benlee@metrodata.co','+852 8765 4321','2022-06-15',48000,1,'CSR',1);
+EXEC dbo.addEmployee @firstName = 'Alice', 
+					@lastName = 'Tanaka', 
+					@gender = 'Female', 
+					@email = 'alicetanaka@metrodata.co', 
+					@phone = '6512345678', 
+					@hireDate = '2023-01-01', 
+					@salary = 40000, 
+					@managerId = NULL, 
+					@jobId = 'CSR', 
+					@departmentId = 1,
+					@password = 'Csr_1234',
+					@confirmPassword = 'Csr_1234';
+					SELECT * FROM tbl_job_histories
+EXEC dbo.addEmployee @firstName = 'Ben', 
+					@lastName = 'Lee', 
+					@gender = 'Male', 
+					@email = 'benlee@metrodata.co', 
+					@phone = '85287654321', 
+					@hireDate = '2022-06-15', 
+					@salary = 48000, 
+					@managerId = 1, 
+					@jobId = 'CSR', 
+					@departmentId = 1,
+					@password = 'Csr_1234',
+					@confirmPassword = 'Csr_1234';
+/*
 INSERT INTO tbl_employees VALUES (3, 'Charlie','Wong','Male','charliewong@metrodata.co','+886 9876 5432','2024-02-01',52000,NULL,'DMS',2);
 INSERT INTO tbl_employees VALUES (4, 'Diana','Kim','Female','dianakim@metrodata.co','+82 1111 2222','2023-08-15',60000,3,'SMMM',2);
 INSERT INTO tbl_employees VALUES (5, 'Ethan','Garcia','Male','ethangarcia@metrodata.co','+63 9087 6543','2022-12-01',45000,1,'CSM',1);
@@ -111,7 +157,13 @@ INSERT INTO tbl_employees VALUES (7, 'Gabriel','Zhang','Male','gabrielzh@metroda
 INSERT INTO tbl_employees VALUES (8, 'Hannah','Khan','Female','hannahkhan@metrodata.co','+91 7654 3210','2022-09-01',62000,NULL,'FA',4);
 INSERT INTO tbl_employees VALUES (9, 'Isaac','Nguyen','Male','isaacnguyen@metrodata.co','+84 2468 1012','2024-04-01',50000,8,'ACC',4);
 INSERT INTO tbl_employees VALUES (10, 'Jasmine','Malhotra','Female','jasminemal@metrodata.co','+92 5555 6666','2023-10-01',42000,2,'DMS',2);
+*/
 
 -- tbl_job_histories //no SP -> Trigger Usage
 -- tbl_accounts //within addEmployee SP
 -- tbl_account_roles //within addEmployee SP
+
+-- tbl_attendances
+EXEC dbo.addAttendance
+	@employee = 1, 
+	@email = 'alicetanaka@metrodata.co'
