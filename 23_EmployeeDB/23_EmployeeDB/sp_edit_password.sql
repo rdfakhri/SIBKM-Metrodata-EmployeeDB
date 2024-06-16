@@ -1,7 +1,7 @@
 -- =============================================
--- Author:		Djulizah B
+-- Author: Djulizah B
 -- Create date: 15-06-2024
--- Description:	<Description,,>
+-- Description:	Stored procedure to edit password
 -- =============================================
 
 CREATE PROCEDURE editPassword (
@@ -55,3 +55,11 @@ BEGIN
     RAISERROR ('Error resetting password: %s', 16, 1, @errorMessage);
   END CATCH;
 END;
+
+EXEC editPassword 
+  @email = 'a@metrodata.co',
+  @password =  'Csr_1234',
+  @newPassword = 'cSR_1234',
+  @confirmPassword = 'cSR_1234'
+
+  select * from tbl_accounts

@@ -1,7 +1,7 @@
 -- =============================================
--- Author:		Djulizah B
+-- Author: Djulizah B
 -- Create date: 14-06-2024
--- Description:	<Description,,>
+-- Description:	Stored procedure when employee forgots password
 -- =============================================
 
 CREATE PROCEDURE forgotPassword (
@@ -63,7 +63,7 @@ BEGIN
           SET @errorMessage = 'OTP expired';
           RAISERROR ('Error: %s', 16, 1, @errorMessage);
         END
-        ELSE -- All checks passed, update password 
+        ELSE
         BEGIN
           UPDATE tbl_accounts
           SET password = @newPassword,
