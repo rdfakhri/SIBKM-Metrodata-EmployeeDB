@@ -1,10 +1,10 @@
 -- =============================================
--- Author:		Djulizah B
+-- Author: Djulizah B
 -- Create date:	14-06-2024
--- Description:	<Description,,>
+-- Description:	Stored procedure to update profile data
 -- =============================================
 
-CREATE PROCEDURE editEmployee (
+CREATE PROCEDURE updateProfile (
 	@id int,
 	@firstName varchar(25),
 	@lastName varchar(25),
@@ -37,14 +37,14 @@ BEGIN
       RETURN;
     END;
 
-    IF dbo.IsNumericPhoneNumber(@phone) = 0
+    IF dbo.isNumericPhoneNumber(@phone) = 0
     BEGIN
       SET @errorMessage = 'Invalid phone number format.';
       RAISERROR ('Error adding employee: %s', 16, 1, @errorMessage);
       RETURN;
     END;
 
-    IF dbo.isValidSalary(@salary) = 0  -- Implement logic for min/max salary in function
+    IF dbo.isValidSalary(@jobId, @salary) = 0 
     BEGIN
       SET @errorMessage = 'Salary is outside the allowed range.';
       RAISERROR ('Error adding employee: %s', 16, 1, @errorMessage);

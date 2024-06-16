@@ -1,7 +1,7 @@
 -- =============================================
--- Author:		Djulizah B
+-- Author: Djulizah B
 -- Create date:	14-06-2024
--- Description:	<Description,,>
+-- Description:	Stored procedure to add employee data
 -- =============================================
 
 CREATE PROCEDURE addEmployee (
@@ -21,6 +21,7 @@ CREATE PROCEDURE addEmployee (
 AS
 BEGIN
   DECLARE @errorMessage nvarchar(500);
+  DECLARE @employeeId int;
 
   BEGIN TRY
     -- Validate password confirmation
@@ -46,14 +47,14 @@ BEGIN
       RETURN;
     END;
 
-    IF dbo.IsNumericPhoneNumber(@phone) = 0
+    IF dbo.isNumericPhoneNumber(@phone) = 0
     BEGIN
       SET @errorMessage = 'Invalid phone number format.';
       RAISERROR ('Error adding employee: %s', 16, 1, @errorMessage);
       RETURN;
     END;
 
-    IF dbo.isValidSalary(@salary) = 0  -- Implement logic for min/max salary in function
+    IF dbo.isValidSalary(@jobId, @salary) = 0 
     BEGIN
       SET @errorMessage = 'Salary is outside the allowed range.';
       RAISERROR ('Error adding employee: %s', 16, 1, @errorMessage);
@@ -86,16 +87,25 @@ BEGIN
       @departmentId
     );
 
+	-- Retrieve newly inserted employee ID
+    SET @employeeId = SCOPE_IDENTITY();
+
     -- Insert account data for the new employee
     INSERT INTO tbl_accounts (
       id,
       username,
-      password
+      password,
+	  otp,
+	  is_expired,
+	  is_used
     )
     VALUES (
       @employeeId,
       @email,
-      @password
+      @password,
+	  0, -- initialize 0
+	  GETDATE(), --initialize by date created
+	  0 -- initialize false
     );
 
     -- Give 'Employee' role to new data in tbl_account_roles
@@ -105,8 +115,11 @@ BEGIN
     )
     VALUES (
       @employeeId,
-      4
+      4 -- role 'Employee' id = 4
     );
+
+	-- Update the tbl_account with actual otp
+	EXEC dbo.generateOtp @email = @email; -- when addEMployee() executed -> error generating otp (null) yet all tables data are inserted
   END TRY
 
   BEGIN CATCH

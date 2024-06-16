@@ -1,7 +1,7 @@
 -- =============================================
--- Author:		Djulizah B
+-- Author: Djulizah B
 -- Create date: 14-06-2024
--- Description:	<Description,,>
+-- Description:	Stored procedure to generate OTP
 -- =============================================
 
 CREATE PROCEDURE generateOtp (@email varchar(25))
@@ -11,8 +11,8 @@ BEGIN
   DECLARE @userId int;
 
   BEGIN TRY
-    -- Check email exists in tbl_accounts
-    SELECT @userId = id FROM tbl_accounts WHERE username = @email;
+    -- Check email exists in tbl_employees
+    SELECT @userId = id FROM tbl_employees WHERE email = @email;
 
     IF @userId IS NOT NULL
     BEGIN
@@ -24,7 +24,7 @@ BEGIN
       UPDATE tbl_accounts
       SET otp = @otp,
           is_used = 0,
-          is_expired = DATEADD(minute, 10, GETDATE())
+          is_expired = DATEADD(minute, 10, (SELECT is_expired FROM tbl_accounts WHERE id= @userId))
       WHERE id = @userId;
 
       -- Print OTP
