@@ -13,6 +13,11 @@ BEGIN
 	DECLARE @maxSalary INT;
 	SET @isValid = 0;
 
+	-- Retrieve min and max salary based on @jobId
+	SELECT @minSalary = min_salary, @maxSalary = max_salary
+	FROM tbl_jobs 
+	WHERE id = @jobId;  
+
 	-- min_salary > salary < max_salary
 	IF @salary BETWEEN @minSalary AND @maxSalary
 	SET @isValid = 1;
